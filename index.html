@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Abdullah — Web developer based in Lahore, Pakistan, building interactive frontend interfaces with JavaScript, HTML, CSS and Tailwind CSS."
+    />
+    <meta name="theme-color" content="#0b0d10" />
+    <title>Abdullah — Web Developer</title>
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Abdullah — Web Developer" />
+    <meta
+      property="og:description"
+      content="Web developer based in Lahore, Pakistan, building interactive frontend interfaces with JavaScript, HTML, CSS and Tailwind CSS."
+    />
+    <meta property="og:image" content="https://your-vercel-url.vercel.app/Assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- TODO: set this to your live domain once deployed -->
+    <meta property="og:url" content="https://your-vercel-url.vercel.app/" />
+    <meta property="og:site_name" content="Abdullah — Web Developer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abdullah — Web Developer" />
+    <meta
+      name="twitter:description"
+      content="Web developer based in Lahore, Pakistan, building interactive frontend interfaces with JavaScript, HTML, CSS and Tailwind CSS."
+    />
+    <meta name="twitter:image" content="https://your-vercel-url.vercel.app/Assets/og-image.png" />
+
+    <!--
+      Inline, render-blocking (intentionally) theme script.
+      Runs before any CSS paints so a saved "light" preference is applied
+      immediately instead of flashing dark-then-light once script.js loads.
+    -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("abdullah-theme") === "light") {
+            document.documentElement.classList.add("light");
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="min-h-screen bg-[var(--bg)] text-[var(--text)] font-[DM_Sans,sans-serif] leading-7 antialiased"
+  >
+    <a
+      href="#main"
+      class="fixed left-4 -top-16 z-[100] rounded-xl bg-[var(--accent)] px-4 py-2 text-sm font-bold text-[#07110e] transition-all focus:top-4"
+      >Skip to content</a
+    >
+
+    <header
+      id="top"
+      class="sticky top-0 z-50 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--bg)_84%,transparent)] backdrop-blur-xl"
+    >
+      <div
+        class="mx-auto flex min-h-[76px] w-[min(calc(100%-48px),1160px)] items-center gap-6 max-[760px]:min-h-[68px] max-[760px]:w-[min(calc(100%-28px),1160px)]"
+      >
+        <a
+          href="#top"
+          id="brand-home"
+          aria-label="Abdullah home"
+          class="group inline-flex items-center gap-2.5 font-['Space_Grotesk'] text-[1.05rem] font-bold"
+        >
+          <span
+            class="grid h-[34px] w-[34px] place-items-center rounded-[11px] bg-[linear-gradient(145deg,var(--accent),var(--accent-2))] text-[#08110e] transition-transform duration-200 group-hover:-translate-y-0.5"
+            >A</span
+          >
+          <span>Abdullah</span>
+        </a>
+
+        <button
+          class="menu-toggle ml-auto hidden h-[38px] w-[42px] place-items-center gap-[3px] flex-col rounded-xl border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] max-[760px]:grid"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open navigation"
+        >
+          <span class="block h-[1.5px] w-[18px] bg-[var(--text)]"></span
+          ><span class="block h-[1.5px] w-[18px] bg-[var(--text)]"></span
+          ><span class="block h-[1.5px] w-[18px] bg-[var(--text)]"></span>
+        </button>
+
+        <nav
+          id="site-nav"
+          aria-label="Primary navigation"
+          class="ml-auto flex items-center gap-6 max-[980px]:gap-4 max-[760px]:absolute max-[760px]:left-[14px] max-[760px]:right-[14px] max-[760px]:top-[68px] max-[760px]:hidden max-[760px]:flex-col max-[760px]:items-stretch max-[760px]:gap-0 max-[760px]:rounded-[18px] max-[760px]:border max-[760px]:border-[var(--line)] max-[760px]:bg-[var(--surface)] max-[760px]:p-3 max-[760px]:shadow-[var(--shadow)]"
+        >
+          <a
+            href="#about"
+            class="rounded-lg px-1.5 py-2 text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)] focus-visible:outline-2 focus-visible:outline-[var(--accent)] max-[760px]:px-3"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="rounded-lg px-1.5 py-2 text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)] focus-visible:outline-2 focus-visible:outline-[var(--accent)] max-[760px]:px-3"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="rounded-lg px-1.5 py-2 text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)] focus-visible:outline-2 focus-visible:outline-[var(--accent)] max-[760px]:px-3"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="rounded-lg px-1.5 py-2 text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)] focus-visible:outline-2 focus-visible:outline-[var(--accent)] max-[760px]:px-3"
+            >Experience</a
+          >
+          <a
+            href="#education"
+            class="rounded-lg px-1.5 py-2 text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)] focus-visible:outline-2 focus-visible:outline-[var(--accent)] max-[760px]:px-3"
+            >Education</a
+          >
+          <a
+            href="#contact"
+            class="rounded-lg px-1.5 py-2 text-sm text-[var(--muted)] transition-colors hover:text-[var(--text)] focus-visible:outline-2 focus-visible:outline-[var(--accent)] max-[760px]:px-3"
+            >Contact</a
+          >
+          <a
+            href="#contact"
+            class="rounded-xl border border-[var(--line)] px-[13px] py-[9px] text-sm font-semibold text-[var(--text)] transition-transform hover:-translate-y-0.5 max-[760px]:mt-1.5 max-[760px]:text-center"
+            >Let’s connect <span>↗</span></a
+          >
+        </nav>
+
+        <button
+          class="theme-toggle h-[38px] w-[38px] rounded-xl border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-transform hover:-translate-y-0.5"
+          type="button"
+          aria-label="Switch to light theme"
+          title="Toggle theme"
+        >
+          ☼
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section
+        class="mx-auto w-[min(calc(100%-48px),1160px)] py-24 max-[980px]:py-20 max-[760px]:w-[min(calc(100%-28px),1160px)] max-[760px]:py-[75px]"
+      >
+        <div
+          class="grid grid-cols-[1.05fr_.95fr] items-center gap-[72px] max-[980px]:grid-cols-1 max-[980px]:gap-8"
+        >
+          <div class="reveal">
+            <div
+              class="inline-flex items-center gap-2.5 rounded-full border border-[var(--line)] bg-[var(--surface)] px-3 py-2 text-[.72rem] font-bold uppercase tracking-[.14em] text-[var(--muted)]"
+            >
+              <span
+                class="status-dot h-[7px] w-[7px] rounded-full bg-[var(--accent)]"
+              ></span>
+              Web developer · building · always learning
+            </div>
+            <h1
+              class="mt-6 max-w-[780px] font-['Space_Grotesk'] text-[clamp(3.3rem,7vw,6rem)] font-bold leading-[1.08] tracking-[-.055em] max-[760px]:text-[clamp(2.85rem,14vw,4.4rem)]"
+            >
+              Building thoughtful web experiences with
+              <span
+                class="bg-[linear-gradient(90deg,var(--accent),var(--accent-2))] bg-clip-text text-transparent"
+                >JavaScript.</span
+              >
+            </h1>
+            <p
+              class="mt-6 max-w-[680px] text-[1.15rem] leading-8 text-[var(--muted)]"
+            >
+              I’m Abdullah, a web developer focused on building interactive,
+              JavaScript-driven interfaces — currently finishing a Software
+              Engineering degree alongside client-facing fintech experience.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a
+                href="#projects"
+                class="inline-flex items-center gap-2.5 rounded-[13px] border border-[var(--line)] bg-[var(--text)] px-[17px] py-[13px] font-bold text-[var(--bg)] transition-transform hover:-translate-y-0.5"
+                >View selected work <span>↓</span></a
+              >
+              <a
+                href="#contact"
+                class="inline-flex items-center gap-2.5 rounded-[13px] border border-[var(--line)] bg-[var(--surface)] px-[17px] py-[13px] text-[var(--text)] transition-transform hover:-translate-y-0.5"
+                >Get in touch <span>↗</span></a
+              >
+            </div>
+            <div
+              class="mt-9 grid max-w-[590px] gap-2 border-t border-[var(--line)] pt-5 text-[.83rem] text-[var(--muted)]"
+            >
+              <span>Currently working with</span>
+              <strong class="text-[.9rem] text-[var(--text)]"
+                >HTML · CSS · JavaScript · Tailwind CSS</strong
+              >
+            </div>
+          </div>
+
+          <div
+            class="hero-visual reveal relative grid min-h-[480px] place-items-center max-[980px]:min-h-[390px] max-[760px]:min-h-[320px]"
+            aria-label="Abstract developer workspace visual"
+            role="img"
+          >
+            <div
+              class="hero-glow absolute h-[310px] w-[310px] rounded-full"
+            ></div>
+            <div
+              class="relative w-full max-w-[500px] rotate-[1.5deg] overflow-hidden rounded-[22px] border border-[var(--line)] bg-[rgba(17,21,26,.88)] shadow-[var(--shadow)] light-card"
+            >
+              <div
+                class="flex items-center gap-[7px] border-b border-[var(--line)] px-4 py-3.5 text-[.72rem] text-[var(--muted)]"
+              >
+                <span
+                  class="h-[7px] w-[7px] rounded-full bg-[var(--muted)] opacity-40"
+                ></span
+                ><span
+                  class="h-[7px] w-[7px] rounded-full bg-[var(--muted)] opacity-40"
+                ></span
+                ><span
+                  class="h-[7px] w-[7px] rounded-full bg-[var(--muted)] opacity-40"
+                ></span
+                ><label class="ml-2">projects.js</label>
+              </div>
+              <pre
+                class="overflow-auto p-6 text-[14px] leading-[1.9] text-[var(--code-text)] max-[760px]:text-[11px]"
+              ><code><b class="text-[var(--accent)]">const</b> focus = {
+  role: <i class="not-italic text-[var(--accent-2)]">"frontend developer"</i>,
+  stack: [<i class="not-italic text-[var(--accent-2)]">"HTML"</i>, <i class="not-italic text-[var(--accent-2)]">"CSS"</i>,
+    <i class="not-italic text-[var(--accent-2)]">"JavaScript"</i>, <i class="not-italic text-[var(--accent-2)]">"Tailwind"</i>],
+  next: <i class="not-italic text-[var(--accent-2)]">"React → Backend"</i>
+};
+
+focus.stack.forEach(skill =&gt; {
+  build(<em class="not-italic text-[var(--accent-3)]">skill</em>);
+});</code></pre>
+            </div>
+            <div
+              class="floating-chip chip-one absolute right-9 top-[42px] rounded-[13px] border border-[var(--line)] bg-[var(--surface)] px-3 py-2.5 font-['Space_Grotesk'] text-[.8rem] font-bold text-[var(--accent)] shadow-[var(--shadow)] max-[760px]:hidden"
+            >
+              JS
+            </div>
+            <div
+              class="floating-chip chip-two absolute left-3 top-[150px] rounded-[13px] border border-[var(--line)] bg-[var(--surface)] px-3 py-2.5 font-['Space_Grotesk'] text-[.8rem] font-bold text-[var(--accent-2)] shadow-[var(--shadow)] max-[760px]:hidden"
+            >
+              &lt;/&gt;
+            </div>
+            <div
+              class="floating-chip chip-three absolute right-1 bottom-20 rounded-[13px] border border-[var(--line)] bg-[var(--surface)] px-3 py-2.5 font-['Space_Grotesk'] text-[.8rem] font-bold text-[var(--accent-3)] shadow-[var(--shadow)] max-[760px]:hidden"
+            >
+              UI
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        class="bg-[linear-gradient(180deg,transparent,rgba(255,255,255,.018),transparent)] py-28 max-[760px]:py-20"
+      >
+        <div
+          class="mx-auto grid w-[min(calc(100%-48px),1160px)] grid-cols-[.8fr_1.2fr] gap-[90px] max-[980px]:grid-cols-1 max-[980px]:gap-[38px] max-[760px]:w-[min(calc(100%-28px),1160px)]"
+        >
+          <div class="reveal">
+            <p
+              class="text-[.72rem] font-bold uppercase tracking-[.14em] text-[var(--muted)]"
+            >
+              01 / About
+            </p>
+            <h2
+              class="mt-3.5 font-['Space_Grotesk'] text-[clamp(2.1rem,4vw,3.7rem)] font-bold leading-[1.08] tracking-[-.04em]"
+            >
+              Early-career, but already
+              <span class="accent-underline">building.</span>
+            </h2>
+          </div>
+          <div class="reveal text-[1.06rem] text-[var(--muted)]">
+            <p class="mb-5">
+              I’m a web developer who enjoys turning ideas into interactive web
+              applications, currently completing a Software Engineering degree
+              alongside it. My core foundation is built around HTML, CSS,
+              JavaScript, and Tailwind CSS, with a strong emphasis on learning
+              by building.
+            </p>
+            <p class="mb-5">
+              My projects have given me hands-on practice with REST APIs,
+              asynchronous JavaScript, browser APIs, Canvas, drag-and-drop
+              interactions, and persistent client-side state. I’m now continuing
+              toward React and backend development as the next steps in my
+              full-stack path.
+            </p>
+            <div
+              class="mt-7 rounded-[17px] border border-[var(--line)] bg-[var(--surface)] p-[18px_20px] text-[.93rem] text-[var(--text)]"
+            >
+              <span class="mr-2 text-[var(--accent)]">↳</span> My goal is
+              simple: become the kind of developer who can understand the
+              problem, build the interface, and keep improving the product.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="py-28 max-[760px]:py-20">
+        <div
+          class="mx-auto w-[min(calc(100%-48px),1160px)] max-[760px]:w-[min(calc(100%-28px),1160px)]"
+        >
+          <div
+            class="section-heading reveal mb-8 flex items-end justify-between gap-10 max-[980px]:block"
+          >
+            <div>
+              <p
+                class="text-[.72rem] font-bold uppercase tracking-[.14em] text-[var(--muted)]"
+              >
+                02 / Skills
+              </p>
+              <h2
+                class="mt-3.5 font-['Space_Grotesk'] text-[clamp(2.1rem,4vw,3.7rem)] font-bold leading-[1.08] tracking-[-.04em]"
+              >
+                A focused toolkit.
+              </h2>
+            </div>
+            <p class="mt-4 max-w-[380px] text-[var(--muted)]">
+              I’m keeping my stack honest: HTML, CSS, JavaScript, Tailwind and
+              Bootstrap are what I build with day to day. C++ and Java are from
+              my degree coursework.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-4 gap-3.5 max-[980px]:grid-cols-2 max-[760px]:grid-cols-1"
+          >
+            <article
+              class="reveal rounded-[20px] border border-[var(--line)] bg-[var(--surface)] p-6 transition-colors duration-300 ease-out hover:border-[color-mix(in_srgb,var(--accent-2)_45%,var(--line))]"
+            >
+              <div class="skill-icon text-[var(--accent)]">&lt;/&gt;</div>
+              <h3 class="font-['Space_Grotesk'] text-xl font-bold">HTML</h3>
+              <p class="mt-2.5 text-[.92rem] text-[var(--muted)]">
+                Semantic structure, accessible markup, forms, and clean page
+                architecture.
+              </p>
+            </article>
+            <article
+              class="reveal rounded-[20px] border border-[var(--line)] bg-[var(--surface)] p-6 transition-colors duration-300 ease-out hover:border-[color-mix(in_srgb,var(--accent-2)_45%,var(--line))]"
+            >
+              <div class="skill-icon text-[var(--accent-2)]">#</div>
+              <h3 class="font-['Space_Grotesk'] text-xl font-bold">CSS</h3>
+              <p class="mt-2.5 text-[.92rem] text-[var(--muted)]">
+                Responsive layouts, Flexbox, Grid, animations, transitions, and
+                modern UI styling.
+              </p>
+            </article>
+            <article
+              class="reveal rounded-[20px] border border-[var(--line)] bg-[var(--surface)] p-6 transition-colors duration-300 ease-out hover:border-[color-mix(in_srgb,var(--accent-2)_45%,var(--line))]"
+            >
+              <div class="skill-icon text-[#f4b46c]">JS</div>
+              <h3 class="font-['Space_Grotesk'] text-xl font-bold">
+                JavaScript
+              </h3>
+              <p class="mt-2.5 text-[.92rem] text-[var(--muted)]">
+                DOM manipulation, events, async flows, APIs, browser features,
+                and interactive UI.
+              </p>
+            </article>
+            <article
+              class="reveal rounded-[20px] border border-[var(--line)] bg-[var(--surface)] p-6 transition-colors duration-300 ease-out hover:border-[color-mix(in_srgb,var(--accent-2)_45%,var(--line))]"
+            >
+              <div class="skill-icon text-[var(--accent-3)]">TW</div>
+              <h3 class="font-['Space_Grotesk'] text-xl font-bold">
+                Tailwind CSS
+              </h3>
+              <p class="mt-2.5 text-[.92rem] text-[var(--muted)]">
+                Utility-first styling and fast, consistent UI composition for
+                responsive interfaces.
+              </p>
+            </article>
+            <article
+              class="reveal rounded-[20px] border border-[var(--line)] bg-[var(--surface)] p-6 transition-colors duration-300 ease-out hover:border-[color-mix(in_srgb,var(--accent-2)_45%,var(--line))]"
+            >
+              <div class="skill-icon text-[#7952b3]">B</div>
+              <h3 class="font-['Space_Grotesk'] text-xl font-bold">
+                Bootstrap
+              </h3>
+              <p class="mt-2.5 text-[.92rem] text-[var(--muted)]">
+                Component library and grid system for quickly assembling
+                responsive layouts.
+              </p>
+            </article>
+            <article
+              class="reveal rounded-[20px] border border-[var(--line)] bg-[var(--surface)] p-6 transition-colors duration-300 ease-out hover:border-[color-mix(in_srgb,var(--accent-2)_45%,var(--line))]"
+            >
+              <div class="skill-icon text-[var(--accent-2)]">C++</div>
+              <h3 class="font-['Space_Grotesk'] text-xl font-bold">C++</h3>
+              <p class="mt-2.5 text-[.92rem] text-[var(--muted)]">
+                University coursework in data structures, algorithms, and
+                object-oriented fundamentals.
+              </p>
+            </article>
+            <article
+              class="reveal rounded-[20px] border border-[var(--line)] bg-[var(--surface)] p-6 transition-colors duration-300 ease-out hover:border-[color-mix(in_srgb,var(--accent-2)_45%,var(--line))]"
+            >
+              <div class="skill-icon text-[#f4b46c]">J</div>
+              <h3 class="font-['Space_Grotesk'] text-xl font-bold">Java</h3>
+              <p class="mt-2.5 text-[.92rem] text-[var(--muted)]">
+                Object-oriented programming coursework, including collections
+                and basic application design.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="projects"
+        class="bg-[linear-gradient(180deg,transparent,rgba(255,255,255,.018),transparent)] py-28 max-[760px]:py-20"
+      >
+        <div
+          class="mx-auto w-[min(calc(100%-48px),1160px)] max-[760px]:w-[min(calc(100%-28px),1160px)]"
+        >
+          <div
+            class="section-heading reveal mb-8 flex items-end justify-between gap-10 max-[980px]:block"
+          >
+            <div>
+              <p
+                class="text-[.72rem] font-bold uppercase tracking-[.14em] text-[var(--muted)]"
+              >
+                03 / Selected projects
+              </p>
+              <h2
+                class="mt-3.5 font-['Space_Grotesk'] text-[clamp(2.1rem,4vw,3.7rem)] font-bold leading-[1.08] tracking-[-.04em]"
+              >
+                Work that shows how I build.
+              </h2>
+            </div>
+            <p class="mt-4 max-w-[380px] text-[var(--muted)]">
+              Five projects that best demonstrate my current frontend and
+              JavaScript skills.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-[18px] max-[760px]:grid-cols-1">
+            <article
+              class="project-card project-featured reveal overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--surface)] hover:border-[color-mix(in_srgb,var(--accent-2)_36%,var(--line))] hover:shadow-[var(--shadow)]"
+            >
+              <div class="project-visual quote-visual">
+                <div class="browser-top">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="quote-shell">
+                  <small>QUOTE OF THE DAY</small>
+                  <div class="quote-mark">“</div>
+                  <strong>Build things that teach you something.</strong
+                  ><span>— Abdullah</span>
+                  <div class="quote-buttons"><i>⌁</i><b>New Quote</b></div>
+                </div>
+                <span class="visual-badge">Tailwind + API</span>
+              </div>
+              <div class="project-content p-[25px_26px_27px]">
+                <div class="project-label">01 · API + UI</div>
+                <h3
+                  class="mt-2 font-['Space_Grotesk'] text-[1.45rem] font-bold"
+                >
+                  QuoteTreasure
+                </h3>
+                <p
+                  class="project-description mt-2.5 mb-[18px] text-[.92rem] text-[var(--muted)]"
+                >
+                  A quote generator with a polished interface, external API
+                  integration, and social-sharing interaction.
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tag">JavaScript</span
+                  ><span class="tag">Tailwind CSS</span
+                  ><span class="tag">REST API</span>
+                </div>
+                <div
+                  class="mt-5 flex gap-[18px] border-t border-[var(--line)] pt-[17px] text-[.82rem] font-bold"
+                >
+                  <a
+                    href="https://quotetreasure.netlify.app/"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo <span>↗</span></a
+                  ><a
+                    href="https://github.com/SyedAbdullah01/QuoteTreasure"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub <span>↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-card reveal overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--surface)] hover:border-[color-mix(in_srgb,var(--accent-2)_36%,var(--line))] hover:shadow-[var(--shadow)]"
+            >
+              <div class="project-visual nasa-visual">
+                <div class="browser-top">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="space-scene">
+                  <div class="planet"></div>
+                  <div class="stars"></div>
+                  <div class="space-copy">
+                    <small>NASA / APOD</small
+                    ><strong>Astronomy<br />Picture of the Day</strong
+                    ><span>Favourites · Load More</span>
+                  </div>
+                </div>
+                <span class="visual-badge">REST API</span>
+              </div>
+              <div class="project-content p-[25px_26px_27px]">
+                <div class="project-label">02 · Async JavaScript</div>
+                <h3
+                  class="mt-2 font-['Space_Grotesk'] text-[1.45rem] font-bold"
+                >
+                  NASA APOD
+                </h3>
+                <p
+                  class="project-description mt-2.5 mb-[18px] text-[.92rem] text-[var(--muted)]"
+                >
+                  Consumes NASA’s Astronomy Picture of the Day API with
+                  asynchronous fetching and saved favourites.
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tag">JavaScript</span
+                  ><span class="tag">REST API</span
+                  ><span class="tag">localStorage</span>
+                </div>
+                <div
+                  class="mt-5 flex gap-[18px] border-t border-[var(--line)] pt-[17px] text-[.82rem] font-bold"
+                >
+                  <a
+                    href="https://nasa-apod-js.netlify.app/"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo <span>↗</span></a
+                  ><a
+                    href="https://github.com/SyedAbdullah01/NASA-APOD"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub <span>↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-card reveal overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--surface)] hover:border-[color-mix(in_srgb,var(--accent-2)_36%,var(--line))] hover:shadow-[var(--shadow)]"
+            >
+              <div class="project-visual paint-visual">
+                <div class="browser-top">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="paint-toolbar">
+                  <b>Brush</b><span>◉</span><span>↙</span><span>⌫</span
+                  ><span>↶</span><span>⇩</span>
+                </div>
+                <div class="canvas-paper">
+                  <div class="stroke stroke-a"></div>
+                  <div class="stroke stroke-b"></div>
+                  <div class="stroke stroke-c"></div>
+                </div>
+                <span class="visual-badge">Canvas API</span>
+              </div>
+              <div class="project-content p-[25px_26px_27px]">
+                <div class="project-label">03 · Browser API</div>
+                <h3
+                  class="mt-2 font-['Space_Grotesk'] text-[1.45rem] font-bold"
+                >
+                  Paint Clone
+                </h3>
+                <p
+                  class="project-description mt-2.5 mb-[18px] text-[.92rem] text-[var(--muted)]"
+                >
+                  A canvas-based drawing app with brush, eraser, fill, color and
+                  size controls, persistence, and PNG export.
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tag">JavaScript</span
+                  ><span class="tag">Canvas API</span
+                  ><span class="tag">localStorage</span>
+                </div>
+                <div
+                  class="mt-5 flex gap-[18px] border-t border-[var(--line)] pt-[17px] text-[.82rem] font-bold"
+                >
+                  <a
+                    href="https://jspaintclone.netlify.app/"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo <span>↗</span></a
+                  ><a
+                    href="https://github.com/SyedAbdullah01/Paint-Clone"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub <span>↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-card reveal overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--surface)] hover:border-[color-mix(in_srgb,var(--accent-2)_36%,var(--line))] hover:shadow-[var(--shadow)]"
+            >
+              <div class="project-visual pong-visual">
+                <div class="browser-top">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="pong-board">
+                  <div class="pong-paddle left"></div>
+                  <div class="pong-paddle right"></div>
+                  <div class="pong-ball"></div>
+                  <div class="pong-line"></div>
+                  <div class="score left-score">07</div>
+                  <div class="score right-score">05</div>
+                </div>
+                <span class="visual-badge">Game logic</span>
+              </div>
+              <div class="project-content p-[25px_26px_27px]">
+                <div class="project-label">04 · Interaction</div>
+                <h3
+                  class="mt-2 font-['Space_Grotesk'] text-[1.45rem] font-bold"
+                >
+                  Pong Game
+                </h3>
+                <p
+                  class="project-description mt-2.5 mb-[18px] text-[.92rem] text-[var(--muted)]"
+                >
+                  A browser-based Pong game focused on real-time interaction,
+                  mouse controls, and game logic.
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tag">JavaScript</span
+                  ><span class="tag">HTML</span><span class="tag">CSS</span>
+                </div>
+                <div
+                  class="mt-5 flex gap-[18px] border-t border-[var(--line)] pt-[17px] text-[.82rem] font-bold"
+                >
+                  <a
+                    href="https://jspong-game.netlify.app/"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo <span>↗</span></a
+                  ><a
+                    href="https://github.com/SyedAbdullah01/Pong-Game"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub <span>↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="project-card project-wide reveal col-span-2 overflow-hidden rounded-3xl border border-[var(--line)] bg-[var(--surface)] hover:border-[color-mix(in_srgb,var(--accent-2)_36%,var(--line))] hover:shadow-[var(--shadow)] max-[760px]:col-span-1"
+            >
+              <div class="project-visual kanban-visual">
+                <div class="browser-top">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="kanban-board">
+                  <div>
+                    <small>BACKLOG</small><b>Research landing page</b
+                    ><b>Draft content</b>
+                  </div>
+                  <div>
+                    <small>IN PROGRESS</small><b>Build card UI</b
+                    ><b>Connect events</b>
+                  </div>
+                  <div>
+                    <small>COMPLETE</small><b>Responsive layout</b
+                    ><b>Drag &amp; drop</b>
+                  </div>
+                  <div><small>ON HOLD</small><b>Design review</b></div>
+                </div>
+                <span class="visual-badge">Drag &amp; Drop API</span>
+              </div>
+              <div class="project-content p-[25px_26px_27px]">
+                <div class="project-label">05 · State + interaction</div>
+                <h3
+                  class="mt-2 font-['Space_Grotesk'] text-[1.45rem] font-bold"
+                >
+                  Drag &amp; Drop Kanban Board
+                </h3>
+                <p
+                  class="project-description mt-2.5 mb-[18px] text-[.92rem] text-[var(--muted)]"
+                >
+                  A Trello-style task board using the HTML5 Drag &amp; Drop API,
+                  dynamic cards, and persistent local storage.
+                </p>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tag">JavaScript</span
+                  ><span class="tag">Drag &amp; Drop API</span
+                  ><span class="tag">localStorage</span>
+                </div>
+                <div
+                  class="mt-5 flex gap-[18px] border-t border-[var(--line)] pt-[17px] text-[.82rem] font-bold"
+                >
+                  <a
+                    href="https://dragand-dropjs.netlify.app/"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo <span>↗</span></a
+                  ><a
+                    href="https://github.com/SyedAbdullah01/Kanban-Drag-Drop"
+                    class="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub <span>↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="py-28 max-[760px]:py-20">
+        <div
+          class="mx-auto grid w-[min(calc(100%-48px),1160px)] grid-cols-[.8fr_1.2fr] gap-[90px] max-[980px]:grid-cols-1 max-[980px]:gap-[38px] max-[760px]:w-[min(calc(100%-28px),1160px)]"
+        >
+          <div class="reveal">
+            <p
+              class="text-[.72rem] font-bold uppercase tracking-[.14em] text-[var(--muted)]"
+            >
+              04 / Experience
+            </p>
+            <h2
+              class="mt-3.5 font-['Space_Grotesk'] text-[clamp(2.1rem,4vw,3.7rem)] font-bold leading-[1.08] tracking-[-.04em]"
+            >
+              FinTech experience beyond the code.
+            </h2>
+          </div>
+          <div class="reveal pt-2">
+            <div class="grid grid-cols-[22px_1fr] gap-[18px]">
+              <div class="relative">
+                <div class="timeline-dot"></div>
+                <div
+                  class="absolute left-[10px] top-[22px] bottom-[-44px] border-l border-dashed border-[var(--line)]"
+                ></div>
+              </div>
+              <div>
+                <div
+                  class="text-[.72rem] font-bold uppercase tracking-[.14em] text-[var(--muted)]"
+                >
+                  Sep 2025 — Apr 2026 · Major European Fintech Platform
+                </div>
+                <h3
+                  class="mt-2.5 font-['Space_Grotesk'] text-[1.45rem] font-bold"
+                >
+                  Technical Solutions Engineer → Team Lead
+                </h3>
+                <p class="mt-3 max-w-[730px] text-[var(--muted)]">
+                  Supported customers through the account-opening and
+                  verification process, helping resolve issues encountered
+                  during KYC checks. Also worked within Financial Investigation
+                  Unit (FIU) workflows, reviewing cases for potential financial
+                  fraud and communicating with customers regarding relevant
+                  issues, using internal systems and tools.
+                </p>
+                <span
+                  class="mt-1 inline-flex rounded-lg border border-[rgba(244,180,108,.25)] bg-[rgba(244,180,108,.05)] px-2 py-1.5 text-[.7rem] text-[#f4b46c]"
+                  >FinTech Operations · KYC & Financial Investigations</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="education"
+        class="bg-[linear-gradient(180deg,transparent,rgba(255,255,255,.018),transparent)] py-28 max-[760px]:py-20"
+      >
+        <div
+          class="mx-auto grid w-[min(calc(100%-48px),1160px)] gap-8 max-[760px]:w-[min(calc(100%-28px),1160px)]"
+        >
+          <div
+            class="section-heading reveal flex items-end justify-between gap-10 max-[980px]:block"
+          >
+            <div>
+              <p
+                class="text-[.72rem] font-bold uppercase tracking-[.14em] text-[var(--muted)]"
+              >
+                05 / Education
+              </p>
+              <h2
+                class="mt-3.5 font-['Space_Grotesk'] text-[clamp(2.1rem,4vw,3.7rem)] font-bold leading-[1.08] tracking-[-.04em]"
+              >
+                Software Engineering.
+              </h2>
+            </div>
+            <p class="mt-4 max-w-[380px] text-[var(--muted)]">
+              Currently pursuing my undergraduate degree while building
+              practical web-development skills alongside university.
+            </p>
+          </div>
+          <article
+            class="reveal flex items-center gap-[18px] rounded-[20px] border border-[var(--line)] bg-[var(--surface)] p-[22px]"
+          >
+            <div class="skill-icon !mb-0 text-[var(--accent-2)]">SE</div>
+            <div>
+              <p
+                class="text-[.62rem] font-bold uppercase tracking-[.14em] text-[var(--accent)]"
+              >
+                Currently pursuing
+              </p>
+              <h3 class="mt-1 font-['Space_Grotesk'] text-[1.35rem] font-bold">
+                Bachelor’s in Software Engineering
+              </h3>
+              <!-- <p class="text-[.88rem] text-[var(--muted)]">
+                University of Management and Technology
+              </p> -->
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20 pb-24 max-[760px]:py-[65px]">
+        <div
+          class="reveal mx-auto grid w-[min(calc(100%-48px),1160px)] grid-cols-[1.25fr_.75fr] gap-[70px] rounded-[28px] border border-[var(--line)] bg-[linear-gradient(145deg,var(--surface),color-mix(in_srgb,var(--surface-2)_80%,var(--surface)))] p-[42px] shadow-[var(--shadow)] max-[980px]:grid-cols-1 max-[980px]:gap-8 max-[760px]:w-[min(calc(100%-28px),1160px)] max-[760px]:p-[26px]"
+        >
+          <div>
+            <p
+              class="text-[.72rem] font-bold uppercase tracking-[.14em] text-[var(--muted)]"
+            >
+              06 / Contact
+            </p>
+            <h2
+              class="mt-3.5 max-w-[650px] font-['Space_Grotesk'] text-[clamp(2.2rem,4vw,3.7rem)] font-bold leading-[1.08] tracking-[-.04em]"
+            >
+              Let’s talk about the next thing to build.
+            </h2>
+            <p class="mt-5 max-w-[610px] text-[var(--muted)]">
+              I’m interested in opportunities where I can keep learning,
+              contribute to real products, and grow into a strong full-stack
+              developer.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a
+                class="inline-flex items-center gap-2.5 rounded-[13px] border border-[var(--line)] bg-[var(--text)] px-[17px] py-[13px] font-bold text-[var(--bg)] transition-transform hover:-translate-y-0.5"
+                href="mailto:syedabdullahamir.dev@gmail.com"
+                ><i class="fa-solid fa-envelope"></i> Email me</a
+              ><a
+                class="inline-flex items-center gap-2.5 rounded-[13px] border border-[var(--line)] bg-[var(--surface)] px-[17px] py-[13px] font-semibold text-[var(--text)] transition-transform hover:-translate-y-0.5"
+                href="Assets/Syed_Abdullah_Resume.pdf"
+                download
+                ><i class="fa-solid fa-download"></i> Download resume</a
+              >
+            </div>
+          </div>
+          <div class="grid content-center gap-2.5">
+            <a
+              class="contact-link"
+              href="https://github.com/SyedAbdullah01"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span><i class="fa-brands fa-github mr-2"></i>GitHub</span
+              ><small>SyedAbdullah01</small><b>↗</b></a
+            ><a
+              class="contact-link"
+              href="https://www.linkedin.com/in/syedabdullahaamir/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span><i class="fa-brands fa-linkedin mr-2"></i>LinkedIn</span
+              ><small>syedabdullahaamir</small><b>↗</b></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-6 pb-10 text-[.75rem] text-[var(--muted)]">
+      <div
+        class="mx-auto flex w-[min(calc(100%-48px),1160px)] items-center justify-between gap-5 border-t border-[var(--line)] pt-5 max-[760px]:w-[min(calc(100%-28px),1160px)] max-[760px]:flex-col max-[760px]:items-start"
+      >
+        <span>© <span id="year"></span> Abdullah · Lahore, Pakistan</span
+        ><a
+          id="back-to-top"
+          href="#top"
+          class="back-to-top cursor-pointer transition-colors hover:text-[var(--accent)]"
+          >Back to top ↑</a
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
