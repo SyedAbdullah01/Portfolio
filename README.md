@@ -39,3 +39,32 @@ changes live, since `watch:css` output isn't minified.
 - If you add a new Tailwind utility class to the HTML that hasn't been used
   before, it won't show up until you rebuild (or if `watch:css` is already
   running, it'll pick it up automatically).
+
+## Deployment
+
+The site is hosted on [Vercel](https://vercel.com), connected directly to
+this GitHub repo. There's no manual deploy step — Vercel watches the `main`
+branch and rebuilds automatically on every push.
+
+**Live URL:** https://abdullahdevportfolio.vercel.app
+
+### Making a change and pushing it live
+
+```bash
+git add .
+git commit -m "describe your change"
+git push
+```
+
+That's it. Vercel picks up the push within seconds, runs `npm install` then
+`npm run build:css` on its own servers, and redeploys. You don't need to run
+a build command locally before pushing — `watch:css` is only useful for
+previewing changes on your own machine before you commit.
+
+### Vercel project settings (for reference, shouldn't need to touch these)
+
+- **Framework Preset:** Other
+- **Build Command:** `npm run build:css`
+- **Output Directory:** `.` (repo root — there's no separate `dist`/`public`
+  folder in this project)
+
